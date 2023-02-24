@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1"/>
+        <title>Massage Mayhem</title>
+        <link rel="icon" href="assets/why.png"/>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body style="margin: 0;">
+        <h2 class="title2">Massage Mayhem</h2>
+        <hr style="margin: 2px;"/>
+        <!--Thanks to https://blog.hubspot.com/website/css-sidebar for the sidebar HTML.-->
+        <div class="sidebar" style="left: 0; top: 0;">
+            <h3 class="center">Click Upgrades</h3>
+            <button class="button" type="button" title="Grants an extra $5 per click." onclick="addMuscularFinger();" disabled="true" id="muscularFingerButton">Extra Muscular Finger ($100)</button>
+            <br/>
+            <button class="button" type="button" title="Doubles money earned per click." onclick="becomeAmbidextrous();" disabled="true" id="ambiButton">Ambidextrous ($1000)</button>
+            <hr/>
+            <h3 class="center">Money Per Second Upgrades</h3>
+            <button class="button" type="button" title="Grants $1 per second." onclick="addAssistant();" disabled="true" id="assistantButton">Incredibly Attractive Assistant ($400)</button>
+            <br/>
+            <button class="button" type="button" title="Grants $200 per second, but every Franchise purchased after that will give you 95% of the previous one." onclick="buyFranchise();" disabled="true" id="franchiseButton">Franchise ($5000)</button>
+            <hr/>
+            <h3 class="center">Robbery Prevention</h3>
+            <button class="button" type="button" title="Reduces the chance of robbery by 20%." onclick="relocate();" disabled="true" id="relocateButton">Relocate ($10000)</button>
+            <br/>
+            <button class="button" type="button" title="Reduces the amount of money stolen, if any. Costs $5 per second." onclick="hireSecurity();">Hire Security</button>
+            <br/>
+            <button class="button" type="button" title="Self explanitory." onclick="fireSecurity();" disabled="true" id="fireSecurity">Fire Security</button>
+            <hr/>
+            <h3 class="center">Free Money</h3>
+            <button class="button" type="button" title="Gives you $50000, but this will kick you from the game if you don't click for 30 seconds." onclick="makePublicOffering();" disabled="true" id="publicOffering">Initial Public Offering (in 10:00)</button>
+        </div>
+        <div style="padding-left: 8px; display: block;">
+            <h2 class="center" id="moneyHeader">$0</h2>
+            <hr style="margin: 2px;"/>
+            <img src="assets/UpperBack.jpg" class="back" style="width: 45%; height: 45%" id="upperBack" onclick="massage('up');" alt="Upper Back"/>
+            <br/>
+            <img src="assets/MidBack.jpg" class="back" style="width: 45%; height: 45%" id="midBack" onclick="massage('mid');" alt="Mid Back"/>
+            <br/>
+            <img src="assets/LowerBack.jpg" class="back" style="width: 45%; height: 45%" id="lowerBack" onclick="massage('low');" alt="Lower Back"/>
+            <br/>
+            <br/>
+            <h3 class="center" id="status">No one is being massaged right now...</h3>
+        </div>
+        <div class="sidebar" style="right: 0; top:0;">
+            <h1 class="center" id="clickMe">Click me!</h1>
+            <button class="button" style="margin: auto; display: block;" type="button" onclick="window.open('help.html'); document.getElementById('clickMe').remove();">Help</button>
+            <hr/>
+            <h3 class="center">Stats:</h3>
+            <p id="sMpc">Money Per Click: $4</p>
+            <p id="sMps">Money Per Second: $0<br/>Net Money Per Second: $0</p>
+            <p id="sRob">Chance to be robbed in 300000ms.<br/>Robbery Chance: 25%<br/>Money at risk: 0$</p>
+            <p id="sAmbi">Ambidextrous: False</p>
+            <p id="sPubOffering">Initial Public Offering: False<br/>Time until Corporate Power Struggle: Not possible yet.</p>
+            <p id="sMusFinger">Extra Muscular Fingers Owned: 0<br/>Extra Muscular Finger Boost: $0<br/>Chance to injure client: 0%</p>
+            <p id="sAssistant">Assistants: 0<br/>Money per Second from Assistants: $0</p>
+            <p id="sFranchise">Franchises: 0<br/>Money per Second from Franchises: $0<br/>Chance for Franchisee Revolt: Not possible yet.<br/>Revolt Chance: 0%</p>
+            <p id="sRelocation">Relocations: 0</p>
+            <p id="sSecurity">Security: 0<br/>Total cost per second: $0</p>
+        </div>
+        <script src="scripts/main.js"></script>
+    </body>
+</html>
